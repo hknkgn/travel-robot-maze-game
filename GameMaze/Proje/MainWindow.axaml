@@ -1,0 +1,317 @@
+<Window
+    x:Class="Proje.MainWindow"
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="clr-namespace:Proje.Grid.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:teast="clr-namespace:Teast.Controls;assembly=Teast.Controls.GroupBox"
+    Title="Proje"
+    MinWidth="876"
+    MinHeight="600"
+    d:DesignHeight="450"
+    d:DesignWidth="800"
+    mc:Ignorable="d">
+    <TabControl>
+        <TabItem>
+            <TabItem.Header>
+                <TextBlock Text="Problem 1" />
+            </TabItem.Header>
+            <SplitView
+                DisplayMode="Inline"
+                IsPaneOpen="True"
+                OpenPaneLength="296">
+                <SplitView.Pane>
+                    <StackPanel>
+                        <Grid x:Name="dosyaDegistir" Margin="0,15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock
+                                Grid.Row="0"
+                                Margin="5,0"
+                                Text="Dosya" />
+                            <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
+                                <Button Click="Problem1_DosyaDegistir" Content="Dosya değiştir" />
+                            </WrapPanel>
+                        </Grid>
+                        <Grid x:Name="pozisyonlarıDegistir" Margin="0,15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock
+                                Grid.Row="0"
+                                Margin="5,0"
+                                Text="Pozisyonlar" />
+                            <WrapPanel
+                                Grid.Row="1"
+                                Margin="15"
+                                HorizontalAlignment="Center">
+                                <Button
+                                    Grid.Column="0"
+                                    Click="Problem1_HedefDegistir"
+                                    Content="Hedefi değiştir" />
+                                <Border Grid.Column="1" Margin="10" />
+                                <Button
+                                    Grid.Column="2"
+                                    Click="Problem1_RobotDegistir"
+                                    Content="Robotu değiştir" />
+                            </WrapPanel>
+                        </Grid>
+                        <Grid Margin="0,15">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock
+                                Grid.Row="0"
+                                Margin="5,0"
+                                Text="Yol bulma" />
+                            <Grid
+                                Grid.Row="1"
+                                Margin="15"
+                                HorizontalAlignment="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+                                    <Button Click="Problem1_YolBul" Content="Yolu bul" />
+                                </WrapPanel>
+
+                                <Border Grid.Row="1" />
+                                <CheckBox
+                                    x:Name="skipAnim"
+                                    Grid.Row="2"
+                                    HorizontalAlignment="Center"
+                                    Checked="Problem1_AnimasyonGec"
+                                    Content="Animasyonu geç"
+                                    IsChecked="False"
+                                    Unchecked="Problem1_AnimasyonGec" />
+
+                            </Grid>
+
+                        </Grid>
+                        <Grid HorizontalAlignment="Stretch">
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock
+                                Grid.Row="0"
+                                Margin="5,0"
+                                Text="Sonuclar" />
+
+                            <WrapPanel
+                                Grid.Row="1"
+                                Margin="0,10"
+                                HorizontalAlignment="Center">
+                                <Grid Grid.Row="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Geçen süre: " />
+                                    <TextBlock
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Algoritma süresi:" />
+                                    <TextBlock
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Toplam adım: " />
+
+                                    <TextBlock
+                                        x:Name="sure1"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                    <TextBlock
+                                        x:Name="sure2"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                    <TextBlock
+                                        x:Name="adim"
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                </Grid>
+
+                            </WrapPanel>
+                        </Grid>
+
+                    </StackPanel>
+                </SplitView.Pane>
+
+                <Grid>
+                    <controls:FileGrid x:Name="grid" />
+                </Grid>
+            </SplitView>
+        </TabItem>
+
+        <TabItem>
+            <TabItem.Header>
+                <TextBlock Text="Problem 2" />
+            </TabItem.Header>
+            <SplitView
+                DisplayMode="Inline"
+                IsPaneOpen="True"
+                OpenPaneLength="296">
+                <SplitView.Pane>
+                    <StackPanel Grid.Row="0" Grid.Column="0">
+                        <StackPanel x:Name="labirentOlustur">
+                            <TextBlock Margin="5,15" Text="Labirent" />
+                            <StackPanel>
+                                <Grid HorizontalAlignment="Center">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition
+                                            Width="Auto"
+                                            MinWidth="20"
+                                            MaxWidth="50" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="0">
+                                        <TextBlock Margin="5,0" Text="Genişlik" />
+                                        <NumericUpDown
+                                            x:Name="labirentGenislik"
+                                            Margin="0,10"
+                                            Increment="1"
+                                            Maximum="200"
+                                            Minimum="5"
+                                            Value="15" />
+                                    </StackPanel>
+                                    <Border Grid.Column="1" />
+                                    <StackPanel Grid.Row="0" Grid.Column="2">
+                                        <TextBlock Margin="5,0" Text="Yükseklik" />
+                                        <NumericUpDown
+                                            x:Name="labirentYukseklik"
+                                            Margin="0,10"
+                                            Increment="1"
+                                            Maximum="200"
+                                            Minimum="5"
+                                            Value="15" />
+                                    </StackPanel>
+                                </Grid>
+
+                                <WrapPanel
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    Margin="0,10"
+                                    HorizontalAlignment="Center">
+                                    <Button Click="LabirentGridOlustur" Content="Oluştur" />
+                                </WrapPanel>
+                            </StackPanel>
+
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock Margin="5,15" Text="Yol bulma" />
+                            <Grid HorizontalAlignment="Center">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="20" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <WrapPanel Grid.Row="0" HorizontalAlignment="Center">
+                                    <Button
+                                        x:Name="Problem2YolBul"
+                                        Grid.Row="0"
+                                        Click="LabirentYolBul"
+                                        Content="Yolu bul" />
+                                </WrapPanel>
+
+                                <Border Grid.Row="1" />
+                                <WrapPanel Grid.Row="2" HorizontalAlignment="Center">
+                                    <CheckBox
+                                        x:Name="skipAnimCheckBox"
+                                        HorizontalAlignment="Center"
+                                        Checked="Problem2_AnimasyonGec"
+                                        Content="Animasyonu geç"
+                                        IsChecked="False"
+                                        Unchecked="Problem2_AnimasyonGec" />
+                                </WrapPanel>
+
+
+                            </Grid>
+                            <Grid
+                                Grid.Row="3"
+                                Margin="0,10"
+                                HorizontalAlignment="Stretch">
+                                <TextBlock Margin="5,0" Text="Sonuclar" />
+                                <Grid Margin="40,20">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="150" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <TextBlock
+                                        Grid.Row="0"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Geçen süre: " />
+                                    <TextBlock
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Algoritma süresi:" />
+                                    <TextBlock
+                                        Grid.Row="2"
+                                        Grid.Column="0"
+                                        Margin="0,5"
+                                        Text="Toplam adım: " />
+
+                                    <TextBlock
+                                        x:Name="LabirentSure1"
+                                        Grid.Row="0"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                    <TextBlock
+                                        x:Name="LabirentSure2"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                    <TextBlock
+                                        x:Name="LabirentAdim"
+                                        Grid.Row="2"
+                                        Grid.Column="1"
+                                        Margin="0,5" />
+                                </Grid>
+                            </Grid>
+
+                        </StackPanel>
+                    </StackPanel>
+                </SplitView.Pane>
+
+                <Grid>
+                    <controls:LabirentGrid x:Name="labirentGrid" />
+                </Grid>
+            </SplitView>
+        </TabItem>
+    </TabControl>
+
+</Window>

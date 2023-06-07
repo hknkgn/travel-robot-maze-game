@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{C40BDF14-379F-4F67-BC50-87FF0D2DD43B}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Proje/Scripts/Pathfinding.cs">
+    <Files>
+      <File FileName="Proje/MainWindow.axaml" />
+      <File FileName="Proje/Grid/Hucre/HucreRenkleri.cs" />
+      <File FileName="Proje/Grid/Classlar/IGrid.cs" />
+      <File FileName="Proje/Scripts/Robot/Robot.cs" />
+      <File FileName="Proje/Scripts/Pathfinding.cs" Line="69" Column="28" />
+      <File FileName="Proje/Scripts/LabirentOlusturucu.cs" />
+      <File FileName="Proje/Grid/Controls/LabirentGrid.cs" />
+      <File FileName="Proje/Grid/Classlar/PathFindSonuc.cs" />
+      <File FileName="Proje/Grid/Controls/FileGrid.cs" />
+      <File FileName="Proje/Grid/Controls/GridTemel.cs" />
+      <File FileName="Proje/Grid/Controls/IntGrid.cs" />
+      <File FileName="Proje/Grid/Hucre/CellType.cs" />
+      <File FileName="Proje/Grid/Hucre/Hucre.cs" />
+      <File FileName="Proje/Scripts/Robot/LabirentRobot.cs" />
+      <File FileName="Proje/örnek text dosyaları/url1.txt" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Proje" expanded="True">
+            <Node name="Proje" expanded="True">
+              <Node name="Dependencies" selected="True" />
+              <Node name="Grid" expanded="True">
+                <Node name="Classlar" expanded="True" />
+                <Node name="Controls" expanded="True" />
+                <Node name="Hucre" expanded="True" />
+              </Node>
+              <Node name="örnek text dosyaları" expanded="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="Robot" expanded="True" />
+              </Node>
+              <Node name="MainWindow.axaml" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Proje PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
